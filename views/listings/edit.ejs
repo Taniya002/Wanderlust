@@ -1,0 +1,54 @@
+<% layout("/layout/boilerplate")%>
+<div class="row">
+   <div class="col-8 offset-2 mt-3">
+    <h3>Edit your Listing</h3>
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT"novalidate class="needs-validation">
+          <div>
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]"  value="<%= listing.title %>" class="form-control" type="text" required/>
+            <div class="invalid-feedback">Please enter the valid Title</div>
+          </div>
+          <div>
+            <label for="title" class="form-label">Description</label>
+
+            <textarea name="listing[description]"class="form-control" required ><%= listing.description %></textarea>
+            <div class="invalid-feedback">Please enter the description</div>
+
+
+          <div>
+            <label for="title" class="form-label" >Image Link</label>
+
+            <input name="listing[image]" value="<%= listing.image %>" type="text" class="form-control" required />
+          </div>
+          <div class="invalid-feedback">Please enter the valid image link</div>
+          <div class="row">
+            <div class="mb-3 col-md-4">
+            
+              <label for="title" class="form-label">Price</label>
+              <input name="listing[price]" value="<%= listing.price %>" type="number" class="form-control" required/>
+
+           <div class="invalid-feedback">Please enter the Price</div>
+            </div>
+
+            <div class="mb-3 col-md-8">
+
+              <label for="title" class="form-label">Country</label>
+
+              <input name="listing[country]"  value="<%= listing.country %>" type="text" class="form-control" required/>
+              <div class="invalid-feedback">Please enter the country name</div>
+            </div>
+          </div>
+
+
+          <div>
+            <label for="title" class="form-label">Location</label>
+
+            <input name="listing[location]"  value="<%= listing.location %>" type="text" class="form-control" required />
+            <div class="invalid-feedback">Please enter the location</div>
+          </div>
+      <br /><br />
+      <button class="btn btn-dark mb-3 ">Edit</button>
+    </form>
+    </div>
+    </div>
+ 
