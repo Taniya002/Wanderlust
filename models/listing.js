@@ -35,11 +35,11 @@ price:{
         type:mongoose.Schema.Types.ObjectId,
         ref:"User",
     },
-// category: {
-//   type: String,
-//   enum: ['Mountains', 'Camping', 'Farms', 'Rooms','Desert','castles','forest','pools','arctic'], 
-//   required: true
-// }
+category: {
+  type: String,
+  enum: ['Mountains', 'Camping', 'Farms', 'Rooms','Desert','castles','forest','pools','arctic'], 
+  required: true
+}
 })
 listingSchema.post("findOneAndDelete",async(listing)=>{
     if(listing){

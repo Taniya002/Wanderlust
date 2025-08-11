@@ -6,6 +6,9 @@
   font-size: 1px;
   color: transparent;
 }
+.rating{
+  width: 10px;
+}
 
 .starability-result:after {
   content: ' ';
